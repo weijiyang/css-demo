@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            background: #eee;
+            margin: 20px;
+            padding: 20px;
+            line-height: 50px;
+            text-align:center;
+            font-size:20px;
+            color:#fff;
+            font-weight: bold;
+        }
+        div div:nth-child(1) {
+            width: 50px;
+            height: 50px;
+            background:red;
+            border: 1px solid black;
+        }
+        div div:nth-child(2) {
+            width: 50px;
+            height: 50px;
+            background:blue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    原版
+    <div>
+        <div>1</div>
+        <div>2</div>
+    </div>
+    父元素z-index 小于子元素
+    <div style="z-index: 0;">
+        <div style="z-index:1">1</div>
+        <div style="z-index:2">2</div>
+    </div>
+    z-index: auto;
+    <div style="position:relative; z-index:auto;background:inherit;">
+            <div style="position:absolute; z-index:2;">1</div>
+    </div>
+    <div style="position:relative; z-index:auto; background:inherit;">
+        <div style="position:absolute; z-index:1;">2</div>
+    </div>
+
+    z-index: 1;
+    <div style="position:relative; z-index:1;background:inherit;">
+            <div style="position:absolute; z-index:2;">1</div>
+    </div>
+    <div style="position:relative; z-index:2;background:inherit;">
+        <div style="position:absolute; z-index:1;">2</div>
+    </div>
+</body>
+</html>
