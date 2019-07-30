@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .cartoon {
+          width: 89;
+          height: 54px;
+          background: url(./pic.png) no-repeat;
+          animation: move 1s steps(6) infinite;
+          -webkit-animation: move 1s steps(6) infinite;
+      }
+      @-webkit-keyframes move {
+          100%{
+              background-position: -533px 0;
+          }
+      }
+      @keyframes move {
+          100%{
+              background-position: -533px 0;
+          }
+      }
+    </style>
+</head>
+<body>
+    <img src="pic.png" alt="error">
+    <div class="cartoon"></div>
+</body>
+</html>
